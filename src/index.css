@@ -1,0 +1,31 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+    font-family: 'Digital';
+    src: url('./digital-7/digital-7.ttf');
+}
+body{
+    font-family: 'Digital';
+}
+
+.buttons div{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5rem;
+}
+
+.buttons div:hover{
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.buttons .num{
+    background: rgb(94, 94, 94);
+}
+.buttons .opr{
+    background: rgb(163, 163, 163);
+}
