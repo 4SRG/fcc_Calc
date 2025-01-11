@@ -1,5 +1,5 @@
+import { evaluate } from "mathjs";
 import { createContext, useState } from "react";
-
 const Context = createContext()
 
 const Contexts = ({ children }) => {
@@ -75,9 +75,9 @@ const Contexts = ({ children }) => {
     function handleRes() {
 
         if (!isStart) {
-            if (!eval(inputText)) return
-            setOutput(eval(inputText))
-            setInputText(a => a + `=${eval(inputText)}`)
+            if (!evaluate(inputText)) return
+            setOutput(evaluate(inputText))
+            setInputText(a => a + `=${evaluate(inputText)}`)
             setIsStart(true)
             setPrevInput('')
             setNum('')
