@@ -19,9 +19,9 @@ const Contexts = ({ children }) => {
     function handleNum(event) {
         let n = event.target.innerText
 
-        if (!inputText && n == '0') return
-        if (n === '.' && num.includes('.') ||
-            n === '.' && num === '') return
+        if (!inputText && n === '0') return
+        if (((n === '.') && (num.includes('.'))) ||
+            (n === '.' && num === '')) return
 
         if (isStart) {
             setOutput(n)
@@ -40,7 +40,7 @@ const Contexts = ({ children }) => {
     function handleOpr(event) {
         let n = event.target.innerText
         if (num[num.length - 1] === '.' ||
-            inputText == '') return
+            inputText === '') return
 
         if (prevInput === '') setPrevInput(inputText)
 
